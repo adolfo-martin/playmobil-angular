@@ -1,0 +1,14 @@
+version: "3.0"
+
+services:
+  auth_web:
+    image: adomargon/node-authentication:1.0
+    container_name: "authentication-web-server"
+    ports: 
+      - "8081:80"
+
+  playmobil_web:
+    image: adomargon/server_playmobil:0.20
+    container_name: "playmobil-web-server"
+    ports:
+      - "8082:80"

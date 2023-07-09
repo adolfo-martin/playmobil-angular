@@ -1,0 +1,10 @@
+<table>
+    <thead>
+        <tr>
+            <th>Series</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="series$ | async as series">
+        <tr *ngFor="let serie of series"></tr>
+    </tbody>
+</table>

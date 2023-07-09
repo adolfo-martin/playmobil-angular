@@ -1,0 +1,17 @@
+<form [formGroup]="formLogin" (ngSubmit)="validateUserCredentials()">
+    <div class="title">Validación de usuarios</div>
+
+    <label>Usuario</label>
+    <input type="text" id="username" formControlName="username" required>
+    <div class="error-message" *ngIf="isSubmitted && username?.errors?.['required']">El usuario es obligatorio.</div>
+
+    <label>Contraseña</label>
+    <input type="password" id="password" formControlName="password" required>
+    <div class="error-message" *ngIf="isSubmitted && password?.errors?.['required']">La contraseña es obligatoria.</div>
+
+    <div class="error-message" *ngIf="errorMessage">{{errorMessage}}</div>
+
+    <input type="submit" value="Validar">
+</form>
+
+<spinner-waiting *ngIf="waiting"></spinner-waiting>

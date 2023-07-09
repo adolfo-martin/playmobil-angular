@@ -1,0 +1,28 @@
+:host {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--color-500-transparent);
+}
+
+div.spinner {
+    width: 100px;
+    height: 100px;
+    border-top: solid 20px var(--color-900);
+    border-right: solid 20px var(--color-900);
+    border-radius: 50%;
+    animation: rotating 1000ms linear 0s infinite;
+}
+
+@keyframes rotating {
+    from {
+        rotate: 0turn;
+    }
+    to {
+        rotate: 1turn;
+    }
+}

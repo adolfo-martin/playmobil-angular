@@ -1,0 +1,14 @@
+<section class="title-app">
+    <div>Playmobil</div>
+</section>
+
+<section *ngIf="authenticationService.user$ | async" class="menu-options">
+    <div routerLink="/series">Series</div>
+    <div>Figuras</div>
+</section>
+
+<section class="session-management">
+    <div class="fullname" *ngIf="authenticationService.user$ | async as user">{{user.firstname + ' ' + user.lastname}}</div>
+    <input type="button" value="Cerrar sesión" *ngIf="authenticationService.user$ | async" (click)="closeSession()">
+    <input type="button" [hidden]="authenticationService.user$ | async" value="Abrir sesión" (click)="gotoLoginPage()">
+</section>

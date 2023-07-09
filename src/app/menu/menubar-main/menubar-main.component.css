@@ -1,0 +1,25 @@
+:host {
+    background-color: var(--color-900);
+    color: var(--color-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+section.title-app {
+    color: var(--color-500);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+section.menu-options {
+    flex: 1 0 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+div.fullname {
+    text-align: center;
+}

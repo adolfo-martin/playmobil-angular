@@ -1,0 +1,7 @@
+### Retrieve series success
+GET http://127.0.0.1:8082/api/series
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZ cnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0NjI0MTMs mV4cCI6MTY3NDQ3NjgxM30.G0cE_q2aB3XXYe5ht4GPUNdVIT48dhWY8lTUY8v8T5o
+
+### Retrieve boxes success
+GET http://127.0.0.1:8082/api/serie/1703135e-03b3-4a32-b8df-16965d19b862/boxes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNvbmlhLnNpbHZlcmFkbyIsImZ cnN0bmFtZSI6IlNvbmlhIiwibGFzdG5hbWUiOiJTaWx2ZXJhZG8iLCJpYXQiOjE2NzQ0NjI0MTMs mV4cCI6MTY3NDQ3NjgxM30.G0cE_q2aB3XXYe5ht4GPUNdVIT48dhWY8lTUY8v8T5o

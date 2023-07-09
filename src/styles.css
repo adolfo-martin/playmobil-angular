@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    --color-100: #ededed;
+    --color-500: #9d9dd5;
+    --color-900: #00008b;
+    --color-500-transparent: #9d9dd5aa;
+    --color-900-transparent: #00008baa;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    min-height: 100vh;
+}
+
+input[type="text"], input[type="password"] {
+    font-size: inherit;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+}
+
+form {
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+form>.title {
+    grid-column: 1 / span 2;
+    padding: 1em;
+    font-size: 1.3em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--color-900);
+    color: var(--color-500);
+    margin: -0.8em -0.8em 0 -0.8em;
+}
+
+input[type="button"],
+input[type="submit"] {
+    border: none;
+    outline: none;
+    font-size: inherit;
+    padding: 0.2em 1.0em;
+    background-color: var(--color-900);
+    color: var(--color-100);
+    /* font-weight: bold; */
+    width: fit-content;
+    border: solid 2.5px var(--color-100);
+    border-radius: 15px;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active {    
+    color: var(--color-500);
+    border: solid 2.5px var(--color-500);
+}
