@@ -24,6 +24,7 @@ export class FormLoginComponent {
     private authenticationService: AuthenticationService,
     private router: Router
   ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     this.user = {} as TUser;
 
     this.formLogin = new FormGroup({
@@ -37,7 +38,7 @@ export class FormLoginComponent {
 
     this.authenticationService.user$.subscribe(user => {
       this.waiting = false;
-      this.router.navigate(['/']);
+      this.router.navigate(['/initial']);
     });
   }
 
@@ -64,11 +65,12 @@ export class FormLoginComponent {
     // @ts-ignore
     this.authenticationService.validateUserCredentials$(username, password).subscribe({
       error: error => {
+        console.log(error)
         this.waiting = false;
         if (error.status === 401) {
           this.errorMessage = "El usuario o la contraseña es incorrecta.";
         } else {
-          this.errorMessage = error.statusText;
+          this.router.navigate(['/error/', error.statusText])
         }
       }
     });

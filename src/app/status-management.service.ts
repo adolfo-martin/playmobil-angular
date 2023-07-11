@@ -24,7 +24,6 @@ export class StatusManagementService {
   ) { 
     this.loggedUser$ = this.loggedUserSubject.asObservable();
     this.authenticationService.user$.subscribe(user => {
-      console.log(user?.accessToken);
       this.loggedUserSubject.next(user);
     })
   }

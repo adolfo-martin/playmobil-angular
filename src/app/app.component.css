@@ -1,0 +1,9 @@
+:host {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.router-outlet-container {
+    flex: 1 1 0;
+}

@@ -1,4 +1,15 @@
 table, tr, th, td {
     border: solid 3px var(--color-900);
     border-collapse: collapse;
+    background-color: var(--color-100);
+    color: var(--color-900);
+}
+
+th {
+    background-color: var(--color-900);
+    color: var(--color-100);
+}
+
+th, td {
+    padding: 0.5em;
 }

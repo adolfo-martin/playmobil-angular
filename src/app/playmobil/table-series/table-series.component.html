@@ -5,6 +5,8 @@
         </tr>
     </thead>
     <tbody *ngIf="series$ | async as series">
-        <tr *ngFor="let serie of series"></tr>
+        <tr *ngFor="let serie of series">
+            <td>{{serie.denomination}}</td>
+        </tr>
     </tbody>
 </table>

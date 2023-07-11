@@ -12,6 +12,8 @@ import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { TableSeriesComponent } from './playmobil/table-series/table-series.component';
 import { PageSeriesComponent } from './pages/page-series/page-series.component';
 import { JwtInterceptor } from './jwt.interceptor';
+import { PageErrorComponent } from './pages/page-error/page-error.component';
+import { PageInitialComponent } from './pages/page-initial/page-initial.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { JwtInterceptor } from './jwt.interceptor';
     PageLoginComponent,
     TableSeriesComponent,
     PageSeriesComponent,
+    PageErrorComponent,
+    PageInitialComponent,
   ],
   imports: [
     BrowserModule,
