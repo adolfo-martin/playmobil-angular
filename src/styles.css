@@ -30,6 +30,7 @@ input[type="text"], input[type="password"] {
 form {
     border-radius: 0.5em;
     padding: 1em;
+    background-color: var(--color-100);
 }
 
 form>.title {
@@ -64,4 +65,20 @@ input[type="button"]:active,
 input[type="submit"]:active {    
     color: var(--color-500);
     border: solid 2.5px var(--color-500);
+}
+
+table, tr, th, td {
+    border: solid 3px var(--color-900);
+    border-collapse: collapse;
+    background-color: var(--color-100);
+    color: var(--color-900);
+}
+
+th {
+    background-color: var(--color-900);
+    color: var(--color-100);
+}
+
+th, td {
+    padding: 0.5em;
 }

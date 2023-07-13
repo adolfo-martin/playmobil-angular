@@ -68,7 +68,7 @@ export class FormLoginComponent {
         console.log(error)
         this.waiting = false;
         if (error.status === 401) {
-          this.errorMessage = "El usuario o la contraseña es incorrecta.";
+          this.errorMessage = "El usuario o la contraseña no son correctos.";
         } else {
           this.router.navigate(['/error/', error.statusText])
         }

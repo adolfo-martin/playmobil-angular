@@ -14,6 +14,10 @@ import { PageSeriesComponent } from './pages/page-series/page-series.component';
 import { JwtInterceptor } from './jwt.interceptor';
 import { PageErrorComponent } from './pages/page-error/page-error.component';
 import { PageInitialComponent } from './pages/page-initial/page-initial.component';
+import { PageBoxesComponent } from './pages/page-boxes/page-boxes.component';
+import { TableBoxesComponent } from './playmobil/table-boxes/table-boxes.component';
+import { PageFiguresComponent } from './pages/page-figures/page-figures.component';
+import { TableFiguresComponent } from './playmobil/table-figures/table-figures.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,10 @@ import { PageInitialComponent } from './pages/page-initial/page-initial.componen
     PageSeriesComponent,
     PageErrorComponent,
     PageInitialComponent,
+    PageBoxesComponent,
+    TableBoxesComponent,
+    PageFiguresComponent,
+    TableFiguresComponent,
   ],
   imports: [
     BrowserModule,

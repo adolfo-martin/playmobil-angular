@@ -1,0 +1,25 @@
+<table *ngIf="figures$ | async as figures; else waiting">
+    <thead>
+        <tr>
+            <th colspan="3">Figuras</th>
+        </tr>
+        <tr>
+            <th>Denominación</th>
+            <th>Cantidad</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let figure of figures">
+            <td>{{figure.denomination}}</td>
+            <td>
+                <img src="http://localhost:8082/assets/{{figure.image}}" alt="">
+            </td>
+            <td>{{figure.quantity}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #waiting>
+    <spinner-waiting></spinner-waiting>
+</ng-template>

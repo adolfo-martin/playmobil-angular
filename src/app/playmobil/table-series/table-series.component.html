@@ -1,12 +1,16 @@
-<table>
+<table *ngIf="series$ | async as series; else waiting">
     <thead>
         <tr>
             <th>Series</th>
         </tr>
     </thead>
-    <tbody *ngIf="series$ | async as series">
+    <tbody>
         <tr *ngFor="let serie of series">
-            <td>{{serie.denomination}}</td>
+            <td routerLink="/boxes/serie/{{serie.uuid}}">{{serie.denomination}}</td>
         </tr>
     </tbody>
 </table>
+
+<ng-template #waiting>
+    <spinner-waiting></spinner-waiting>
+</ng-template>

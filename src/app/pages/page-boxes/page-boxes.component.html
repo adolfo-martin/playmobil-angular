@@ -1,0 +1,5 @@
+<table-boxes *ngIf="serieUuid; else emptySerie" serie="{{serieUuid}}"></table-boxes>
+
+<ng-template #emptySerie>
+    <table-boxes></table-boxes>
+</ng-template>

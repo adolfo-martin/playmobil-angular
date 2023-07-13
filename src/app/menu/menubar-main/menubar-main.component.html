@@ -4,7 +4,8 @@
 
 <section *ngIf="authenticationService.user$ | async" class="menu-options">
     <div routerLink="/series">Series</div>
-    <div>Figuras</div>
+    <div routerLink="/boxes">Cajas</div>
+    <div routerLink="/figures">Figuras</div>
 </section>
 
 <section class="session-management">

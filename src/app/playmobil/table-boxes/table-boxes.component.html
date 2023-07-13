@@ -1,0 +1,16 @@
+<table *ngIf="boxes$ | async as boxes; else waiting">
+    <thead>
+        <tr>
+            <th>Cajas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let box of boxes">
+            <td routerLink="/figures/box/{{box.uuid}}">{{box.denomination}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #waiting>
+    <spinner-waiting></spinner-waiting>
+</ng-template>
