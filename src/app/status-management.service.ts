@@ -27,9 +27,4 @@ export class StatusManagementService {
       this.loggedUserSubject.next(user);
     })
   }
-
-  // public setLoggedUser(user: TUser) {
-  //   this.user = user;
-  //   this.loggedUserSubject.next(user)
-  // }
 }

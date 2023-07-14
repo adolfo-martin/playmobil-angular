@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { AuthenticationService } from '../../login/authentication.service';
 import { PlaymobilService } from '../playmobil.service';
 import { Observable } from 'rxjs';
 
@@ -16,7 +15,6 @@ export class TableFiguresComponent {
 
 
   constructor(
-    private authService: AuthenticationService, 
     private playmobilService: PlaymobilService
   ) { }
   

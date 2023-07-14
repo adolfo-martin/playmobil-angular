@@ -29,7 +29,7 @@ export class AuthenticationService {
 
 
   public validateUserCredentials$(username: string, password: string): Observable<TUser> {
-    const url = 'http://127.0.0.1:8081/api/login_user ';
+    const url = 'http://127.0.0.1:8081/api/login_user';
     const body = { username, password };
     
     return this.http.post<{ accessToken: string, refreshToken: string }>(url, body).pipe(
