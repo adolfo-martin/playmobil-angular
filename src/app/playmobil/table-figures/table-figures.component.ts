@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PlaymobilService } from '../playmobil.service';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Component({
   selector: 'table-figures',
@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class TableFiguresComponent {
   @Input('box') boxUuid: string = '';
+  @Output('figureSelected') private figureSelectedEmitter = new EventEmitter<string>();
 
   // @ts-ignore
   figures$: Observable<[TFigure]> = undefined;
-
 
   constructor(
     private playmobilService: PlaymobilService
@@ -23,7 +23,11 @@ export class TableFiguresComponent {
     if (this.boxUuid) {
       this.figures$ = this.playmobilService.retrieveFiguresByBoxId$(this.boxUuid);
     } else {
-      this.figures$ = this.playmobilService.retrieveFigures$();
+      this.figures$ = this.playmobilService.retrieveFigures$().pipe(tap(console.log));
     }
+  }
+
+  protected emitFigureSelected(figureUuid: string) {
+    this.figureSelectedEmitter.emit(figureUuid);
   }
 }

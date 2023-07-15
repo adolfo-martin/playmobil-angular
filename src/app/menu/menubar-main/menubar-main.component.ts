@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../login/authentication.service';
+import { StatusManagementService } from '../../status-management.service';
 
 @Component({
   selector: 'menubar-main',
@@ -12,6 +13,7 @@ export class MenubarMainComponent {
 
   constructor(
     protected authenticationService: AuthenticationService,
+    protected statusManagementService: StatusManagementService,
     private router: Router
   ) { }
 

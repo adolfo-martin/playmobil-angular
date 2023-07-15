@@ -1,17 +1,12 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
+import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { StatusManagementService } from './status-management.service';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
   static playmobilApiUrl = 'http://127.0.0.1:8082/';
-  token: string = '';
+  token?: string;
 
   constructor(private statusManagementService: StatusManagementService) {
     this.statusManagementService.loggedUser$.subscribe(user => this.token = user?.accessToken);

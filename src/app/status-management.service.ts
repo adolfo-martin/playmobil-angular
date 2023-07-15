@@ -15,7 +15,7 @@ type TUser = {
 })
 export class StatusManagementService {
   private loggedUserSubject: Subject<any> = new BehaviorSubject(null);
-  loggedUser$: Observable<TUser>;
+  loggedUser$: Observable<TUser | null>;
 
   private user: TUser = {} as TUser;
 

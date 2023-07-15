@@ -18,6 +18,7 @@ import { PageBoxesComponent } from './pages/page-boxes/page-boxes.component';
 import { TableBoxesComponent } from './playmobil/table-boxes/table-boxes.component';
 import { PageFiguresComponent } from './pages/page-figures/page-figures.component';
 import { TableFiguresComponent } from './playmobil/table-figures/table-figures.component';
+import { TabFigureComponent } from './playmobil/tab-figure/tab-figure.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { TableFiguresComponent } from './playmobil/table-figures/table-figures.c
     TableBoxesComponent,
     PageFiguresComponent,
     TableFiguresComponent,
+    TabFigureComponent,
   ],
   imports: [
     BrowserModule,
